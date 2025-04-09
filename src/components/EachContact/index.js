@@ -18,7 +18,7 @@ const EachContact = (props) => {
     navigate(`/update/${each._id}`);
   };
   return (
-    <li className="border-2 border-white-500 p-5 m-4 flex justify-between w-full">
+    <li className="border-2 border-white-500 mt-5 p-5 flex justify-between w-full">
       <div>
         <p>Name: {name}</p>
         <p>Email: {email}</p>

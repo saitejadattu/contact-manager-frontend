@@ -40,61 +40,66 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center flex-1">
         <form
           onSubmit={handleForm}
-          className="bg-slate-700 p-5 rounded text-white flex justify-center items-center gap-5 flex-1"
+          className="bg-slate-700 p-6 rounded text-white w-full max-w-xl mx-auto flex flex-col gap-4"
         >
-          <div>
-            <label htmlFor="name">Name</label>
-            <br />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <label htmlFor="name" className="w-full sm:w-1/3">
+              Name
+            </label>
             <input
               id="name"
               name="name"
               type="text"
               onChange={handleInput}
-              placeholder="Enter Your Name........"
+              placeholder="Enter Your Name"
               value={data.name}
-              className="border-2 bg-slate-600"
+              className="border-2 bg-slate-600 rounded px-3 py-2 w-full sm:w-2/3"
               required
             />
           </div>
-          <br />
-          <div>
-            <label htmlFor="email">Email</label>
-            <br />
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <label htmlFor="email" className="w-full sm:w-1/3">
+              Email
+            </label>
             <input
               id="email"
               name="email"
               type="email"
               onChange={handleInput}
-              placeholder="Enter email......"
-              value={data?.email}
-              className="border-2  bg-slate-600"
+              placeholder="Enter Email"
+              value={data.email}
+              className="border-2 bg-slate-600 rounded px-3 py-2 w-full sm:w-2/3"
               required
             />
-            <br />
           </div>
 
-          <div>
-            <label htmlFor="number">Phone Number</label>
-            <br />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <label htmlFor="number" className="w-full sm:w-1/3">
+              Phone Number
+            </label>
             <input
               id="number"
               name="phone"
               type="number"
-              placeholder="Enter Your Number.........."
+              placeholder="Enter Your Number"
               value={data.phone}
-              className="border-2  bg-slate-600"
               onChange={handleInput}
+              className="border-2 bg-slate-600 rounded px-3 py-2 w-full sm:w-2/3"
               required
             />
-            <br />
           </div>
-          <button
-            className="p-3 rounded bg-white text-black mt-5"
-            type="submit"
-          >
-            Add
-          </button>
+
+          <div className="flex justify-end">
+            <button
+              className="px-6 py-2 rounded bg-white text-black hover:bg-gray-200 transition mt-4"
+              type="submit"
+            >
+              Add
+            </button>
+          </div>
         </form>
+
         <ul className="list-none w-2/3 flex-">
           {contacts
             ? [...contacts]
