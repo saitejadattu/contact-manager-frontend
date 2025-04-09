@@ -11,14 +11,14 @@ const EachContact = (props) => {
     method: "Delete",
   };
   const handleDelete = async () => {
-    await fetch(`https://contact-manager-backend-2-gv9i.onrender.com/delete/${each._id}`, payload);
+    await fetch(`https://contact-manager-backend-4.onrender.com/delete/${each._id}`, payload);
     deleted();
   };
   const handeleUpdate = () => {
     navigate(`/update/${each._id}`);
   };
   return (
-    <li className="border-2 border-red-500 p-5 m-1 flex justify-between w-full">
+    <li className="border-2 border-white-500 p-5 m-4 flex justify-between w-full">
       <div>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
